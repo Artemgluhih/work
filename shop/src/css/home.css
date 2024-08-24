@@ -1,0 +1,347 @@
+@font-face {
+    font-family:Gotic;
+    src: url(/src/font/Copperplate_Gothic_Bold.ttf);
+}
+
+@font-face {
+    font-family: SC;
+    src: url(/src/font/CormorantSC-Regular.ttf);
+}
+
+html,
+body {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    background-color: #D2D2D2;
+}
+
+.container {
+    padding: 0 15px;
+}
+
+.none {
+    display: none; 
+}
+
+.nav {
+    padding: 0 115px;
+    height: 1000px;
+    margin-bottom: 20px;
+}
+
+.logo {
+    width: 100%;
+    height: 98px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.logo img {
+    width: 333px;
+}
+
+.pod_logo {
+
+    display: flex;
+    text-align: center;
+    margin-bottom: 35px;
+    justify-content: center;
+    margin-left: 500px;
+}
+
+.pod_logo_item{
+    display: flex;
+    text-align: center;
+}
+
+.pod_logo_item_h1{
+    margin-right: 250px;
+}
+.icon_menu{
+    display: flex;
+}
+
+.icon_menu img {
+    width: 33px;
+    height: 33px;
+    margin-left: 51px;
+}
+
+.menu{
+    display: block;
+    width: 100%;
+}
+
+.nav_list {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 53px;
+}
+
+.nav_list a {
+    padding: 0 33px;
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    font-weight: 600;
+    font-family: "SC";
+}
+
+.slideshow {
+    display: block;
+    width: 1260px;
+    height: 730px;
+    background-color:#595954;
+    position: relative;
+    overflow: hidden;
+    margin: auto;
+    border-radius: 10px;
+}
+
+.slideshow_item{
+    width: 100%;
+    height: 730px;
+    display: flex;
+    position: absolute;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.slideshow_item.active {
+    opacity: 1;
+    z-index: 2;
+    pointer-events: auto;
+}
+
+.slideshow_img {
+    width: 640px;
+    height: 730px;
+    object-fit: contain;
+    
+}
+
+.slideshow_img img {
+    height: 100%;
+    width: 100%;
+}
+
+.slideshow_item_text{
+    color: white;
+    width: 620px;
+    text-align: center;
+    z-index: 1;
+}
+
+.slideshow_item_text h2 {
+    font-size: 45px;
+    margin-bottom: 53px;
+    margin-top: 190px;
+    height: 110px;
+    line-height: 1;
+}
+
+.slideshow_item_text p {
+    font-size: 20px;
+    margin-bottom: 60px;
+    height: 60px;
+}
+
+.btn_slideshow{
+    width: 147px;
+    height: 52px;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    cursor: pointer;
+    position: relative;
+    z-index: 3;
+}
+
+.btn_slideshow img{
+    width: 19px;
+    margin-left: 17px;
+    filter: brightness(0) invert(1);
+}
+
+.section{
+    display: flex;
+    position: relative;
+    margin-top: 20px;
+    width: 100%;
+    height: 100%;
+    padding: 0 115px;
+    justify-content: center;
+}
+
+.categories {
+    max-width: 1260px;
+}
+.zagolovoc_cat {
+    display: flex; /* Используем flexbox для выравнивания элементов */
+    align-items: center; /* Вертикальное выравнивание по центру */
+    margin: 40px 0; /* Отступы сверху и снизу */
+    justify-content: center;
+}
+
+.zagolovoc_cat::before,
+.zagolovoc_cat::after {
+    content: "";
+    border-top: 3px solid #000; /* Стиль и цвет линий */
+    flex-grow: 1; /* Линии занимают все доступное пространство */
+}
+
+.zagolovoc_cat::before {
+    max-width: 34px; /* Длина линии слева */
+    margin-right: 15px; /* Отступ справа от линии */
+}
+
+.zagolovoc_cat::after {
+    max-width: 1050px; /* Длина линии справа */
+    margin-left: 15px; /* Отступ слева от линии */
+}
+
+.zagolovoc_cat h3 {
+    white-space: nowrap; /* Предотвращает перенос текста */
+    margin: 0; /* Убираем стандартные отступы */
+    font-size: 30px;
+}
+
+.cat_c {
+    display: flex;
+    max-width: 1260px;
+    justify-content: center;
+}
+
+.cat_block {
+    display: flex;
+    height: 1000px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.cat_block_item {
+    width: 618px;
+    height: 300px;
+    background-color: #595954;
+    
+}
+.cat_block_item button {
+    width: 618px;
+    height: 300px;
+}
+
+.cat_button1,
+.cat_button2,
+.cat_button3,
+.cat_button4, 
+.cat_button5,
+.cat_button6 {
+    color: #fff;
+    display: flex;
+
+}
+
+.cat_button1 {
+    background-image: url(/src/img/furniture.png);
+}
+.cat_button2{
+    background-image: url(/src/img/svet.png);
+}
+.cat_button3{
+    background-image: url(/src/img/decor.png);
+}
+.cat_button4{
+    background-image: url();
+}
+.cat_button5{
+    background-image: url();
+}
+
+
+.cat_button1 h3::after,
+.cat_button2 h3::after,
+.cat_button3 h3::after,
+.cat_button4 h3::after,
+.cat_button5 h3::after,
+.cat_button6 h3::after  {
+    content: "";
+    display: block;
+    width: 250px;
+    height: 2px;
+    background-color: #fff;
+    position: absolute;
+    margin-top: 14px;
+}
+
+
+.cat_block_item h3 {
+    color: #fff;
+    padding: 36px 0px 0px 34px;
+    font-size: 30px;
+}
+
+.brands_c {
+    display: flex;
+    justify-content: center;
+}
+
+.slideshow_brands {
+    display: flex;
+    width: 1263px;
+    height: 800px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.brands_item_img  {
+    width: 267px;
+    height: 320px;
+}
+
+.brands_item_img button{
+    width: 267px;
+    height: 320px;
+}
+
+.brands_button1 {
+    background-image: url(/src/img/new_brands/svoydesign.png);
+}
+.brands_button2{
+    background-image: url(/src/img/new_brands/lum.png);
+}
+.brands_button3{
+    background-image: url(/src/img/new_brands/levehome.png);
+}
+.brands_button4{
+    background-image: url(/src/img/new_brands/lineasette.png);
+}
+.brands_button5{
+    background-image: url(/src/img/new_brands/MiraclePot.png);
+}
+.brands_button6{
+    background-image: url(/src/img/new_brands/Ceramum.png);
+}
+.brands_button7{
+    background-image: url(/src/img/new_brands/Michurin.png);
+}
+.brands_button8{
+    background-image: url(/src/img/new_brands/Panormo.png);
+}
+
+.brands_item {
+    margin-bottom: 50px;
+}
+
+
+.brands_item_text h4 {
+    font-size: 30px;
+    text-align: center;
+    margin-top: 13px;
+}
+
+
